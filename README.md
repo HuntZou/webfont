@@ -11,16 +11,25 @@
 #### 引入js
 
 1. 引入js
-2. 调用cropFont(elementId)方法，注：调用该方法需要给需要使用字体的元素加上id
+2. 调用cropFont(elementId)方法
+
+注1：调用该方法需要给需要使用字体的元素加上id
+
+注2: 字体名字怎么传下方有说明
 
 示例：
 
 ```html
 <div id='hi'>中国人民从此站起来了</div>
 
+
 <script type="text/javascript" src="https://webfont.woyou.cool/huntzou_webfont_crop.js"></script>
 <script>
-cropFont("hi")
+window.onload = function() {
+    cropFont("hi", "MaShanZheng-Regular.ttf");
+    // 支持同时给不同的标签使用不同的字体
+    //cropFont("id2", "LiuJianMaoCao-Regular.ttf");
+}
 </script>
 ```
 
